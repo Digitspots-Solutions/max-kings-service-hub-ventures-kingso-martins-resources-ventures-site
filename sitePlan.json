@@ -1,0 +1,49 @@
+{
+  "businessName": "Max-kings Service Hub Ventures & Kingso Martins Resources Ventures",
+  "industry": "Manufacturing",
+  "tone": "professional and confident",
+  "tagline": "Excellence in Manufacturing Solutions Across Nigeria",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "Max-kings Service Hub Ventures & Kingso Martins Resources Ventures\n\nYour Trusted Manufacturing Partner in Lagos\n\nWe deliver quality manufacturing solutions tailored to meet the diverse needs of Nigerian businesses. From production to distribution, we maintain the highest standards of excellence and reliability.\n\nLocated at Block 2 Shop 11 Bay Beach Towers, Victoria Island, Lagos",
+      "imagePrompt": "Modern Nigerian manufacturing facility exterior with glass and steel architecture, Victoria Island Lagos skyline visible in background, professional workers in safety gear collaborating, golden hour lighting, clean industrial aesthetic, photorealistic, high quality",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "Building Nigeria's Manufacturing Future\n\nMax-kings Service Hub Ventures and Kingso Martins Resources Ventures represent a commitment to excellence in the Nigerian manufacturing sector. Based in the heart of Victoria Island, Lagos, we combine modern manufacturing techniques with deep understanding of local market needs.\n\nOur facility at Bay Beach Towers serves as a hub for innovative manufacturing solutions, where we transform raw materials into quality products that meet international standards while remaining accessible to the Nigerian market.\n\nWith years of experience in the Eti Osa business community, we've built a reputation for reliability, quality control, and timely delivery. Our team of skilled professionals ensures every project receives the attention and expertise it deserves.",
+      "imagePrompt": "Interior of modern manufacturing plant in Nigeria, state-of-the-art machinery, Nigerian engineers and technicians working, quality control processes visible, bright industrial lighting, clean organized workspace, professional atmosphere, photorealistic",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "Comprehensive Manufacturing Solutions\n\nCustom Manufacturing\nTailored production solutions designed to meet your specific requirements. We work closely with clients to bring their product visions to life with precision and efficiency.\n\nQuality Control & Assurance\nRigorous testing and inspection processes ensure every product meets the highest standards before leaving our facility. Your satisfaction and safety are our priorities.\n\nSupply Chain Management\nEnd-to-end logistics coordination from raw material sourcing to final product delivery across Lagos and beyond. We handle the complexity so you can focus on your business.\n\nProduct Development\nCollaborative consultation services to help you refine product specifications, optimize manufacturing processes, and reduce production costs without compromising quality.\n\nBulk Production\nScalable manufacturing capacity for large orders with consistent quality across every unit. Competitive pricing for volume orders.\n\nDistribution Services\nEfficient distribution networks ensuring your products reach their destination safely and on schedule throughout Nigeria.",
+      "imagePrompt": "Collage-style image showing various manufacturing processes: workers operating machinery, quality inspection with precision instruments, logistics coordination, Nigerian warehouse with organized inventory, modern production line, professional and dynamic, photorealistic",
+      "layout": "grid"
+    },
+    {
+      "id": "why-choose-us",
+      "name": "Why Choose Us",
+      "copy": "The Max-kings & Kingso Martins Advantage\n\nStrategic Location\nOur Victoria Island location provides easy access for clients across Lagos and beyond, with proximity to major transportation networks and business districts.\n\nLocal Expertise\nDeep understanding of Nigerian market dynamics, regulatory requirements, and business culture ensures smooth operations and compliance.\n\nQuality Commitment\nWe never compromise on quality. Every product undergoes thorough inspection and testing before delivery.\n\nCompetitive Pricing\nEfficient processes and strategic sourcing allow us to offer competitive rates without sacrificing quality or service.\n\nReliable Partnership\nWe view every client relationship as a long-term partnership. Your success is our success.\n\nExperienced Team\nOur skilled professionals bring years of manufacturing expertise and are committed to continuous improvement and innovation.",
+      "imagePrompt": "Professional Nigerian business team in manufacturing setting, diverse group of confident workers and managers, modern facility background, Victoria Island business district visible through windows, warm professional lighting, success and partnership theme, photorealistic",
+      "layout": "cards"
+    },
+    {
+      "id": "contact",
+      "name": "Contact Us",
+      "copy": "Let's Discuss Your Manufacturing Needs\n\nReady to start your next manufacturing project? Our team is here to answer your questions and provide expert guidance.\n\nVisit Our Facility\nBlock 2 Shop 11 Bay Beach Towers\nVictoria Island, Lagos\nEti Osa, Nigeria\n\nCall Us\n+234 903 960 4047\n\nBusiness Hours\nMonday - Friday: 8:00 AM - 6:00 PM\nSaturday: 9:00 AM - 2:00 PM\nSunday: Closed\n\nWhether you need a quote, want to discuss a custom project, or simply have questions about our manufacturing capabilities, we're ready to help. Contact us today and experience the Max-kings & Kingso Martins difference.",
+      "imagePrompt": "Professional Nigerian business contact scene, modern office reception area in Victoria Island Lagos, Bay Beach Towers building exterior, welcoming customer service representative, phone and digital communication icons, clean corporate environment, inviting atmosphere, photorealistic",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "+234 903 960 4047",
+    "email": "",
+    "address": "Block 2 Shop 11 Bay Beach Towers, Victoria Island, Lagos, Eti Osa, Nigeria",
+    "whatsapp": "https://wa.me/2349039604047"
+  }
+}

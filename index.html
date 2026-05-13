@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max-kings Service Hub Ventures & Kingso Martins Resources Ventures - Excellence in Manufacturing Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #111010;
+            --color-accent: #d95400;
+            --color-bg: #EEEBE5;
+            --color-text: #141414;
+            --color-surface: #222120;
+            --color-secondary-accent: #8ba6ab;
+            --font-display: 'Exo 2', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+            --border-radius: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(238, 235, 229, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 4px 0 0 var(--color-primary);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -4px 0 0 0 var(--color-primary);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/3089681/pexels-photo-3089681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center/cover no-repeat;
+            z-index: -2;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            padding: 0 2rem;
+            color: #ffffff;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0 0 var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 0 var(--color-primary);
+        }
+
+        section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #about {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            box-shadow: 8px 8px 0 0 var(--color-primary);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        #services {
+            background: var(--color-surface);
+            color: #ffffff;
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+            padding-top: 120px;
+            padding-bottom: 120px;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        #services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(238, 235, 229, 0.05);
+            padding: 2rem;
+            border-left: 4px solid var(--color-accent);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            background: rgba(238, 235, 229, 0.1);
+            transform: translateX(8px);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        #why-choose-us {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        #why-choose-us h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: #ffffff;
+            padding: 2rem;
+            box-shadow: 4px 4px 0 0 var(--color-primary);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 0 var(--color-primary);
+        }
+
+        .why-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+        }
+
+        .why-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        #contact {
+            background: var(--color-primary);
+            color: #ffffff;
+            text-align: center;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+            padding-top: 120px;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: left;
+        }
+
+        .contact-item h3 {
+            color: var(--color-accent);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 4px 4px 0 0 var(--color-primary);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: var(--color-surface);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-container {
+                gap: 2rem;
+            }
+
+            section {
+                padding: 60px 2rem;
+            }
+
+            #services, #contact {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .about-content h2,
+            #services h2,
+            #why-choose-us h2,
+            #contact h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            section {
+                padding: 48px 1.5rem;
+            }
+
+            #services, #contact {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Max-kings & Kingso Martins</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Max-kings Service Hub Ventures & Kingso Martins Resources Ventures</h1>
+            <p class="tagline">Excellence in Manufacturing Solutions Across Nigeria</p>
+            <p>Your Trusted Manufacturing Partner in Lagos</p>
+            <p>We deliver quality manufacturing solutions tailored to meet the diverse needs of Nigerian businesses. From production to distribution, we maintain the highest standards of excellence and reliability.</p>
+            <p>Located at Block 2 Shop 11 Bay Beach Towers, Victoria Island, Lagos</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <img src="https://images.pexels.com/photos/36823725/pexels-photo-36823725.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Manufacturing Excellence" class="about-image">
+            <div class="about-content">
+                <h2>Building Nigeria's Manufacturing Future</h2>
+                <p>Max-kings Service Hub Ventures and Kingso Martins Resources Ventures represent a commitment to excellence in the Nigerian manufacturing sector. Based in the heart of Victoria Island, Lagos, we combine modern manufacturing techniques with deep understanding of local market needs.</p>
+                <p>Our facility at Bay Beach Towers serves as a hub for innovative manufacturing solutions, where we transform raw materials into quality products that meet international standards while remaining accessible to the Nigerian market.</p>
+                <p>With years of experience in the Eti Osa business community, we've built a reputation for reliability, quality control, and timely delivery. Our team of skilled professionals ensures every project receives the attention and expertise it deserves.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Comprehensive Manufacturing Solutions</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Custom Manufacturing</h3>
+                <p>Tailored production solutions designed to meet your specific requirements. We work closely with clients to bring their product visions to life with precision and efficiency.</p>
+            </div>
+            <div class="service-card">
+                <h3>Quality Control & Assurance</h3>
+                <p>Rigorous testing and inspection processes ensure every product meets the highest standards before leaving our facility. Your satisfaction and safety are our priorities.</p>
+            </div>
+            <div class="service-card">
+                <h3>Supply Chain Management</h3>
+                <p>End-to-end logistics coordination from raw material sourcing to final product delivery across Lagos and beyond. We handle the complexity so you can focus on your business.</p>
+            </div>
+            <div class="service-card">
+                <h3>Product Development</h3>
+                <p>Collaborative consultation services to help you refine product specifications, optimize manufacturing processes, and reduce production costs without compromising quality.</p>
+            </div>
+            <div class="service-card">
+                <h3>Bulk Production</h3>
+                <p>Scalable manufacturing capacity for large orders with consistent quality across every unit. Competitive pricing for volume orders.</p>
+            </div>
+            <div class="service-card">
+                <h3>Distribution Services</h3>
+                <p>Efficient distribution networks ensuring your products reach their destination safely and on schedule throughout Nigeria.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us">
+        <h2>The Max-kings & Kingso Martins Advantage</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <h3>Strategic Location</h3>
+                <p>Our Victoria Island location provides easy access for clients across Lagos and beyond, with proximity to major transportation networks and business districts.</p>
+            </div>
+            <div class="why-card">
+                <h3>Local Expertise</h3>
+                <p>Deep understanding of Nigerian market dynamics, regulatory requirements, and business culture ensures smooth operations and compliance.</p>
+            </div>
+            <div class="why-card">
+                <h3>Quality Commitment</h3>
+                <p>We never compromise on quality. Every product undergoes thorough inspection and testing before delivery.</p>
+            </div>
+            <div class="why-card">
+                <h3>Competitive Pricing</h3>
+                <p>Efficient processes and strategic sourcing allow us to offer competitive rates without sacrificing quality or service.</p>
+            </div>
+            <div class="why-card">
+                <h3>Reliable Partnership</h3>
+                <p>We view every client relationship as a long-term partnership. Your success is our success.</p>
+            </div>
+            <div class="why-card">
+                <h3>Experienced Team</h3>
+                <p>Our skilled professionals bring years of manufacturing expertise and are committed to continuous improvement and innovation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Let's Discuss Your Manufacturing Needs</h2>
+            <p>Ready to start your next manufacturing project? Our team is here to answer your questions and provide expert guidance.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Visit Our Facility</h3>
+                    <p>Block 2 Shop 11 Bay Beach Towers<br>Victoria Island, Lagos<br>Eti Osa, Nigeria</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+2349039604047">+234 903 960 4047</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+            <p>Whether you need a quote, want to discuss a custom project, or simply have questions about our manufacturing capabilities, we're ready to help. Contact us today and experience the Max-kings & Kingso Martins difference.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Max-kings Service Hub Ventures & Kingso Martins Resources Ventures. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/2349039604047" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.408 1.417-5.267-0.325-0.527c-1.331-2.186-2.035-4.706-2.035-7.285 0-7.588 6.179-13.767 13.767-13.767s13.767 6.179 13.767 13.767c0 7.588-6.179 13.833-13.767 13.833zM21.713 18.54c-0.397-0.199-2.351-1.158-2.715-1.29s-0.629-0.199-0.893 0.199c-0.265 0.397-1.025 1.29-1.257 1.555s-0.463 0.298-0.86 0.099c-0.397-0.199-1.678-0.618-3.196-1.973-1.182-1.054-1.98-2.355-2.212-2.753s-0.025-0.612 0.174-0.811c0.179-0.178 0.397-0.463 0.596-0.694s0.265-0.397 0.397-0.662c0.132-0.265 0.066-0.496-0.033-0.694s-0.893-2.151-1.224-2.945c-0.322-0.773-0.649-0.668-0.893-0.681-0.231-0.012-0.496-0.015-0.76-0.015s-0.694 0.099-1.058 0.496c-0.364 0.397-1.388 1.357-1.388 3.308s1.421 3.838 1.619 4.103c0.199 0.265 2.8 4.276 6.782 5.998 0.947 0.41 1.687 0.655 2.264 0.837 0.954 0.303 1.821 0.26 2.507 0.158 0.765-0.114 2.351-0.96 2.682-1.888s0.331-1.723 0.232-1.888c-0.099-0.165-0.364-0.265-0.76-0.463z"/>
+        </svg>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

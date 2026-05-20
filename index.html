@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max-kings Service Hub Ventures & Kingso Martins Resources Ventures - Excellence in Manufacturing Solutions</title>
+    <title>Estherella Bureau de Change - Your Trusted Partner in Currency Exchange</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #111010;
-            --color-accent: #d95400;
-            --color-bg: #EEEBE5;
-            --color-text: #141414;
-            --color-surface: #222120;
-            --color-secondary-accent: #8ba6ab;
+            --color-primary: #020204;
+            --color-accent: #1c5ec3;
+            --color-bg: #EEF2F8;
+            --color-text: #050810;
+            --color-surface: #06080d;
+            --color-secondary-accent: #1dae76;
             --font-display: 'Exo 2', sans-serif;
-            --font-body: 'Outfit', sans-serif;
-            --border-radius: 0px;
+            --font-body: 'Figtree', sans-serif;
+            --border-radius: 6px;
         }
 
         * {
@@ -33,13 +33,33 @@
         body {
             font-family: var(--font-body);
             color: var(--color-text);
-            background: var(--color-bg);
+            background-color: var(--color-bg);
             line-height: 1.6;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(2, 2, 4, 0.02) 19px, rgba(2, 2, 4, 0.02) 20px),
+                repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(2, 2, 4, 0.02) 19px, rgba(2, 2, 4, 0.02) 20px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-display);
-            font-weight: 800;
+            font-weight: 700;
             line-height: 1.2;
         }
 
@@ -57,17 +77,16 @@
         nav {
             position: sticky;
             top: 0;
-            background: rgba(238, 235, 229, 0.95);
+            background: rgba(238, 242, 248, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 4px 0 0 var(--color-primary);
+            border-bottom: 1px solid rgba(2, 2, 4, 0.1);
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -75,17 +94,16 @@
 
         .logo {
             font-family: var(--font-display);
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: var(--color-primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-decoration: none;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
             list-style: none;
+            gap: 2rem;
         }
 
         .nav-links a {
@@ -93,26 +111,10 @@
             color: var(--color-text);
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--color-accent);
-            transition: width 0.3s ease;
         }
 
         .nav-links a:hover {
             color: var(--color-accent);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
         }
 
         .mobile-menu-btn {
@@ -149,7 +151,7 @@
             width: 300px;
             height: calc(100vh - 70px);
             background: var(--color-bg);
-            box-shadow: -4px 0 0 0 var(--color-primary);
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
             transition: right 0.3s ease;
             z-index: 999;
             padding: 2rem;
@@ -181,91 +183,89 @@
             color: var(--color-accent);
         }
 
+        section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         #hero {
             position: relative;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            max-width: none;
             animation: fadeUp 0.6s ease forwards;
-            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
         }
 
-        #hero::before {
-            content: '';
+        .hero-image {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://images.pexels.com/photos/3089681/pexels-photo-3089681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center/cover no-repeat;
-            z-index: -2;
+            object-fit: cover;
+            z-index: 1;
         }
 
-        #hero::after {
-            content: '';
+        .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.55);
-            z-index: -1;
+            z-index: 2;
         }
 
         .hero-content {
-            max-width: 1200px;
-            padding: 0 2rem;
-            color: #ffffff;
+            position: relative;
+            z-index: 3;
+            color: white;
+            max-width: 900px;
+            padding: 2rem;
         }
 
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-weight: 800;
         }
 
         .hero-content .tagline {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            color: var(--color-accent);
+            font-family: var(--font-display);
             font-weight: 600;
+            color: var(--color-secondary-accent);
         }
 
         .hero-content p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.8;
         }
 
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
             background: var(--color-accent);
-            color: #ffffff;
+            color: white;
             text-decoration: none;
+            border-radius: var(--border-radius);
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 4px 4px 0 0 var(--color-primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            border: 2px solid var(--color-accent);
         }
 
         .cta-button:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0 0 var(--color-primary);
-        }
-
-        section {
-            padding: 80px 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            background: transparent;
+            border-color: white;
         }
 
         #about {
@@ -273,7 +273,7 @@
             animation-delay: 0.1s;
         }
 
-        .about-container {
+        .about-split {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
@@ -284,37 +284,31 @@
             width: 100%;
             height: 500px;
             object-fit: cover;
-            box-shadow: 8px 8px 0 0 var(--color-primary);
+            border-radius: var(--border-radius);
         }
 
         .about-content h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             color: var(--color-primary);
-            text-transform: uppercase;
         }
 
         .about-content p {
-            margin-bottom: 1.5rem;
             font-size: 1.05rem;
+            line-height: 1.8;
         }
 
         #services {
-            background: var(--color-surface);
-            color: #ffffff;
-            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
-            padding-top: 120px;
-            padding-bottom: 120px;
+            background: white;
             animation: fadeUp 0.6s ease forwards;
             animation-delay: 0.2s;
         }
 
         #services h2 {
-            text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #ffffff;
-            text-transform: uppercase;
+            text-align: center;
+            color: var(--color-primary);
         }
 
         .services-grid {
@@ -324,22 +318,16 @@
         }
 
         .service-card {
-            background: rgba(238, 235, 229, 0.05);
+            background: var(--color-bg);
             padding: 2rem;
+            border-radius: var(--border-radius);
             border-left: 4px solid var(--color-accent);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            background: rgba(238, 235, 229, 0.1);
-            transform: translateX(8px);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
-            color: var(--color-accent);
-            text-transform: uppercase;
+            color: var(--color-primary);
         }
 
         .service-card p {
@@ -353,11 +341,10 @@
         }
 
         #why-choose-us h2 {
-            text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
+            text-align: center;
             color: var(--color-primary);
-            text-transform: uppercase;
         }
 
         .why-grid {
@@ -367,22 +354,16 @@
         }
 
         .why-card {
-            background: #ffffff;
+            background: white;
             padding: 2rem;
-            box-shadow: 4px 4px 0 0 var(--color-primary);
-            transition: all 0.3s ease;
-        }
-
-        .why-card:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0 0 var(--color-primary);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .why-card h3 {
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: var(--color-accent);
-            text-transform: uppercase;
         }
 
         .why-card p {
@@ -391,56 +372,54 @@
         }
 
         #contact {
-            background: var(--color-primary);
-            color: #ffffff;
-            text-align: center;
-            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-            padding-top: 120px;
+            background: var(--color-surface);
+            color: white;
             animation: fadeUp 0.6s ease forwards;
             animation-delay: 0.4s;
         }
 
-        #contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #ffffff;
-            text-transform: uppercase;
+        .contact-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .contact-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .contact-content p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            font-size: 1.05rem;
             line-height: 1.8;
+            margin-bottom: 1rem;
         }
 
         .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-            text-align: left;
+            margin-top: 2rem;
         }
 
-        .contact-item h3 {
-            color: var(--color-accent);
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
+        .contact-item {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         .contact-item a {
-            color: #ffffff;
+            color: var(--color-secondary-accent);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact-item a:hover {
-            color: var(--color-accent);
+            color: white;
         }
 
         .whatsapp-float {
@@ -448,7 +427,7 @@
             bottom: 30px;
             right: 30px;
             background: #25D366;
-            color: #ffffff;
+            color: white;
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -456,10 +435,10 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            box-shadow: 4px 4px 0 0 var(--color-primary);
-            z-index: 999;
             text-decoration: none;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: transform 0.3s ease;
         }
 
         .whatsapp-float:hover {
@@ -467,33 +446,10 @@
         }
 
         footer {
-            background: var(--color-surface);
-            color: #ffffff;
+            background: var(--color-primary);
+            color: white;
             text-align: center;
             padding: 2rem;
-        }
-
-        footer p {
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-container {
-                gap: 2rem;
-            }
-
-            section {
-                padding: 60px 2rem;
-            }
-
-            #services, #contact {
-                padding-top: 100px;
-                padding-bottom: 100px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -505,6 +461,10 @@
                 display: flex;
             }
 
+            section {
+                padding: 48px 1.5rem;
+            }
+
             .hero-content h1 {
                 font-size: 2rem;
             }
@@ -513,39 +473,31 @@
                 font-size: 1.2rem;
             }
 
-            .about-container {
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about-split,
+            .contact-split {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .about-image {
+            .about-image,
+            .contact-image {
                 height: 300px;
             }
 
             .about-content h2,
+            .contact-content h2,
             #services h2,
-            #why-choose-us h2,
-            #contact h2 {
+            #why-choose-us h2 {
                 font-size: 2rem;
             }
 
             .services-grid,
             .why-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            section {
-                padding: 48px 1.5rem;
-            }
-
-            #services, #contact {
-                padding-top: 80px;
-                padding-bottom: 80px;
             }
 
             .whatsapp-float {
@@ -556,152 +508,168 @@
                 right: 20px;
             }
         }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            section {
+                padding: 64px 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .services-grid,
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Max-kings & Kingso Martins</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why-choose-us">Why Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="content-wrapper">
+        <nav>
+            <div class="nav-container">
+                <a href="#hero" class="logo">Estherella</a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
+        </nav>
+
         <div class="mobile-menu">
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#why-choose-us">Why Us</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </nav>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Max-kings Service Hub Ventures & Kingso Martins Resources Ventures</h1>
-            <p class="tagline">Excellence in Manufacturing Solutions Across Nigeria</p>
-            <p>Your Trusted Manufacturing Partner in Lagos</p>
-            <p>We deliver quality manufacturing solutions tailored to meet the diverse needs of Nigerian businesses. From production to distribution, we maintain the highest standards of excellence and reliability.</p>
-            <p>Located at Block 2 Shop 11 Bay Beach Towers, Victoria Island, Lagos</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </section>
+        <section id="hero">
+            <img src="https://images.pexels.com/photos/245219/pexels-photo-245219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Estherella Bureau de Change" class="hero-image">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Estherella Bureau de Change</h1>
+                <p class="tagline">Your Trusted Partner in Currency Exchange</p>
+                <p>Welcome to Estherella Bureau de Change - Nigeria's Premier Currency Exchange Service. Licensed and regulated by the Central Bank of Nigeria, we provide fast, secure, and competitive foreign exchange services for individuals and businesses across Lagos and beyond. Experience seamless currency transactions with rates that work for you.</p>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </section>
 
-    <section id="about">
-        <div class="about-container">
-            <img src="https://images.pexels.com/photos/36823725/pexels-photo-36823725.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Manufacturing Excellence" class="about-image">
-            <div class="about-content">
-                <h2>Building Nigeria's Manufacturing Future</h2>
-                <p>Max-kings Service Hub Ventures and Kingso Martins Resources Ventures represent a commitment to excellence in the Nigerian manufacturing sector. Based in the heart of Victoria Island, Lagos, we combine modern manufacturing techniques with deep understanding of local market needs.</p>
-                <p>Our facility at Bay Beach Towers serves as a hub for innovative manufacturing solutions, where we transform raw materials into quality products that meet international standards while remaining accessible to the Nigerian market.</p>
-                <p>With years of experience in the Eti Osa business community, we've built a reputation for reliability, quality control, and timely delivery. Our team of skilled professionals ensures every project receives the attention and expertise it deserves.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2>Comprehensive Manufacturing Solutions</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Custom Manufacturing</h3>
-                <p>Tailored production solutions designed to meet your specific requirements. We work closely with clients to bring their product visions to life with precision and efficiency.</p>
-            </div>
-            <div class="service-card">
-                <h3>Quality Control & Assurance</h3>
-                <p>Rigorous testing and inspection processes ensure every product meets the highest standards before leaving our facility. Your satisfaction and safety are our priorities.</p>
-            </div>
-            <div class="service-card">
-                <h3>Supply Chain Management</h3>
-                <p>End-to-end logistics coordination from raw material sourcing to final product delivery across Lagos and beyond. We handle the complexity so you can focus on your business.</p>
-            </div>
-            <div class="service-card">
-                <h3>Product Development</h3>
-                <p>Collaborative consultation services to help you refine product specifications, optimize manufacturing processes, and reduce production costs without compromising quality.</p>
-            </div>
-            <div class="service-card">
-                <h3>Bulk Production</h3>
-                <p>Scalable manufacturing capacity for large orders with consistent quality across every unit. Competitive pricing for volume orders.</p>
-            </div>
-            <div class="service-card">
-                <h3>Distribution Services</h3>
-                <p>Efficient distribution networks ensuring your products reach their destination safely and on schedule throughout Nigeria.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-choose-us">
-        <h2>The Max-kings & Kingso Martins Advantage</h2>
-        <div class="why-grid">
-            <div class="why-card">
-                <h3>Strategic Location</h3>
-                <p>Our Victoria Island location provides easy access for clients across Lagos and beyond, with proximity to major transportation networks and business districts.</p>
-            </div>
-            <div class="why-card">
-                <h3>Local Expertise</h3>
-                <p>Deep understanding of Nigerian market dynamics, regulatory requirements, and business culture ensures smooth operations and compliance.</p>
-            </div>
-            <div class="why-card">
-                <h3>Quality Commitment</h3>
-                <p>We never compromise on quality. Every product undergoes thorough inspection and testing before delivery.</p>
-            </div>
-            <div class="why-card">
-                <h3>Competitive Pricing</h3>
-                <p>Efficient processes and strategic sourcing allow us to offer competitive rates without sacrificing quality or service.</p>
-            </div>
-            <div class="why-card">
-                <h3>Reliable Partnership</h3>
-                <p>We view every client relationship as a long-term partnership. Your success is our success.</p>
-            </div>
-            <div class="why-card">
-                <h3>Experienced Team</h3>
-                <p>Our skilled professionals bring years of manufacturing expertise and are committed to continuous improvement and innovation.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-content">
-            <h2>Let's Discuss Your Manufacturing Needs</h2>
-            <p>Ready to start your next manufacturing project? Our team is here to answer your questions and provide expert guidance.</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Visit Our Facility</h3>
-                    <p>Block 2 Shop 11 Bay Beach Towers<br>Victoria Island, Lagos<br>Eti Osa, Nigeria</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Call Us</h3>
-                    <p><a href="tel:+2349039604047">+234 903 960 4047</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>Business Hours</h3>
-                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+        <section id="about">
+            <div class="about-split">
+                <img src="https://images.pexels.com/photos/32656347/pexels-photo-32656347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="About Estherella" class="about-image">
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>Estherella Bureau de Change, operating as Estherella Currency Services Limited, is a fully licensed financial services institution specializing in foreign exchange transactions. Located in the heart of Victoria Island, Lagos, we bring over a decade of commercial banking expertise to every transaction. Our commitment is simple: provide transparent, efficient, and reliable currency exchange services that meet the diverse needs of Nigeria's dynamic economy. Whether you're traveling abroad, making international payments, or managing business forex requirements, Estherella delivers excellence with every exchange.</p>
                 </div>
             </div>
-            <p>Whether you need a quote, want to discuss a custom project, or simply have questions about our manufacturing capabilities, we're ready to help. Contact us today and experience the Max-kings & Kingso Martins difference.</p>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Max-kings Service Hub Ventures & Kingso Martins Resources Ventures. All rights reserved.</p>
-    </footer>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Currency Exchange Services</h3>
+                    <p>We buy and sell major international currencies including US Dollar, British Pound, Euro, South African Rand, and more at highly competitive rates.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Corporate Foreign Exchange</h3>
+                    <p>Tailored forex solutions for businesses with international operations, import/export requirements, and overseas payment obligations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Travel Money Services</h3>
+                    <p>Get the foreign currency you need for business trips, holidays, education, or medical travel abroad with same-day service.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Money Transfer Services</h3>
+                    <p>Safe and efficient international money transfer solutions for personal and business remittances.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Foreign Exchange Advisory</h3>
+                    <p>Expert guidance on currency trends, optimal exchange timing, and forex risk management for businesses.</p>
+                </div>
+            </div>
+        </section>
 
-    <a href="https://wa.me/2349039604047" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.408 1.417-5.267-0.325-0.527c-1.331-2.186-2.035-4.706-2.035-7.285 0-7.588 6.179-13.767 13.767-13.767s13.767 6.179 13.767 13.767c0 7.588-6.179 13.833-13.767 13.833zM21.713 18.54c-0.397-0.199-2.351-1.158-2.715-1.29s-0.629-0.199-0.893 0.199c-0.265 0.397-1.025 1.29-1.257 1.555s-0.463 0.298-0.86 0.099c-0.397-0.199-1.678-0.618-3.196-1.973-1.182-1.054-1.98-2.355-2.212-2.753s-0.025-0.612 0.174-0.811c0.179-0.178 0.397-0.463 0.596-0.694s0.265-0.397 0.397-0.662c0.132-0.265 0.066-0.496-0.033-0.694s-0.893-2.151-1.224-2.945c-0.322-0.773-0.649-0.668-0.893-0.681-0.231-0.012-0.496-0.015-0.76-0.015s-0.694 0.099-1.058 0.496c-0.364 0.397-1.388 1.357-1.388 3.308s1.421 3.838 1.619 4.103c0.199 0.265 2.8 4.276 6.782 5.998 0.947 0.41 1.687 0.655 2.264 0.837 0.954 0.303 1.821 0.26 2.507 0.158 0.765-0.114 2.351-0.96 2.682-1.888s0.331-1.723 0.232-1.888c-0.099-0.165-0.364-0.265-0.76-0.463z"/>
-        </svg>
-    </a>
+        <section id="why-choose-us">
+            <h2>Why Choose Estherella</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Licensed & Regulated</h3>
+                    <p>Fully authorized by the Central Bank of Nigeria, ensuring your transactions are secure and compliant with Nigerian financial regulations.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Competitive Rates</h3>
+                    <p>We consistently offer some of the best exchange rates in Lagos, maximizing value for every transaction.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Expert Leadership</h3>
+                    <p>Founded and managed by experienced commercial banking professionals who understand the intricacies of foreign exchange markets.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Prime Location</h3>
+                    <p>Conveniently situated at Block 2 Shop 11 Bay Beach Towers, Victoria Island - easily accessible from Lekki, Ikoyi, and the Lagos Island business districts.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Fast Service</h3>
+                    <p>Most transactions completed within minutes, with same-day service for larger corporate requirements.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Transparency</h3>
+                    <p>No hidden charges. What you see is what you get, with clear rate displays and upfront communication.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-split">
+                <div class="contact-content">
+                    <h2>Visit Us Today</h2>
+                    <p>Ready to exchange currency? Visit our Victoria Island office or contact us for current rates and inquiries.</p>
+                    <p><strong>Office Hours:</strong><br>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Address:</strong><br>
+                            Block 2 Shop 11 Bay Beach Towers, Victoria Island, Lagos, Nigeria
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong> <a href="tel:+2349039604047">+234 903 960 4047</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong> <a href="mailto:info@estherella.org">info@estherella.org</a>
+                        </div>
+                    </div>
+                    <p style="margin-top: 2rem;">For immediate assistance, call or WhatsApp us. Our experienced team is ready to serve you with professionalism and efficiency.</p>
+                    <p style="margin-top: 1rem; font-style: italic;">Estherella Bureau de Change - Where trust meets excellence in currency exchange.</p>
+                </div>
+                <img src="https://images.pexels.com/photos/11421664/pexels-photo-11421664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Contact Estherella" class="contact-image">
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Estherella Bureau de Change. All rights reserved.</p>
+        </footer>
+
+        <a href="https://wa.me/2349039604047" class="whatsapp-float" target="_blank" rel="noopener">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M16 0C7.164 0 0 7.164 0 16c0 2.823.735 5.479 2.011 7.781L.096 30.915l7.382-1.935A15.924 15.924 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.547 0-4.97-.718-7.031-1.964l-.5-.292-5.208 1.365 1.391-5.083-.318-.518A13.276 13.276 0 012.667 16c0-7.364 5.969-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.292-9.583c-.401-.203-2.37-1.172-2.74-1.307-.365-.13-.635-.198-.901.198-.266.401-1.031 1.307-1.266 1.573-.234.266-.469.302-.87.099-.401-.198-1.693-.625-3.224-1.99-1.193-1.063-1.995-2.37-2.229-2.776-.234-.401-.026-.62.177-.818.177-.177.401-.464.604-.698.198-.234.266-.401.401-.667.13-.266.063-.5-.036-.698-.099-.198-.901-2.172-1.234-2.974-.323-.776-.651-.672-.901-.682-.234-.016-.5-.016-.766-.016s-.703.099-1.068.5c-.37.401-1.401 1.37-1.401 3.344s1.432 3.88 1.635 4.146c.198.266 2.818 4.302 6.828 6.031.953.411 1.698.656 2.281.839.958.302 1.828.26 2.516.161.766-.115 2.37-.969 2.703-1.906.333-.937.333-1.74.234-1.906-.099-.172-.37-.266-.776-.464z"/>
+            </svg>
+        </a>
+    </div>
 
     <script>
+        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -711,6 +679,7 @@
                 mobileMenu.classList.toggle('active');
             });
 
+            // Close mobile menu when clicking a link
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
